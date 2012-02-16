@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'rubygems'
+
 
 get '/' do
   @title = "CoffeeScript in Sinatra"
