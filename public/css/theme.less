@@ -1,9 +1,12 @@
-@background: #ddd;
-@primary: #222;
-@secondary: #444;
-@highlight: teal;
+@background: #eee;
+@primary: #333;
+@secondary: #333;
+@highlight: darksalmon;
 @hover: @highlight;
-@border: 1px;
+@border: 10px;
+@glyphs: @highlight;
+
+@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
 
 @headingfont: "Gotham";
 @bodyfont: "Gotham";
@@ -24,12 +27,22 @@ img {
   margin-bottom: 20px;
 }
 
+#portfolio img {
+  max-width:100% - @border;
+  padding: @border; /* A percentage that, when doubled and added to the above, makes 100%. */
+  background:url(@pattern) @primary; /* Color of the faux border. */
+}
+
+#portfolio img:hover {
+  background-color: @highlight; /* Color of the faux border. */
+}
+
 body {
   background-color: @background;
   padding-top: 0px;
   font-family: @bodyfont;
 
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @background;
+  background:url(@pattern) @background;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
@@ -50,12 +63,14 @@ p, li, a {
 }
 
 hr {
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @primary;
+  background:url(@pattern) @primary;
   color: @primary;
   padding-top: @border;
   border: none;
   margin: 0 0 20px 0;
 }
+
+
 
 .textcenter {
   text-align: center;
@@ -90,13 +105,13 @@ span.reverse {
   float: left;
   height: 1px;
   line-height: 1px;
-  color: @highlight;
+  color: @glyphs;
 }
 
 .calltoaction {
   float: left;
   padding: 0px 0 0px 7px;
-  color: @highlight;
+  color: @glyphs;
 }
 
 
@@ -332,7 +347,7 @@ CENTERED MENU
 #centeredmenu ul li a {
    display:block;
    margin:0;
-   padding: 1em 1em .8em 1em;
+   padding: .9em 1em .9em 1em;
    line-height:1em;
    text-decoration:none;
    color:@primary;
@@ -344,12 +359,12 @@ CENTERED MENU
    background:@primary;
 }
 #centeredmenu ul li a:hover {
-   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat @primary;
+   background:url(@pattern) repeat @primary;
    color:#fff;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
-   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat @primary;
+   background:url(@pattern) repeat @primary;
    color:@background;
 }
 
@@ -370,7 +385,7 @@ CENTERED MENU
   clear:left;
   width:100%;
   margin-top: 1px;
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat @primary;
+  background:url(@pattern) repeat @primary;
 }
 
 #centeredmenu ul ul li:first-child {
@@ -396,7 +411,7 @@ CENTERED MENU
 #centeredmenu ul li:hover ul li a:hover,
 #centeredmenu ul li.hover ul li a:hover { /* This line is required for IE 6 and below */
    color: @background;
-   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat @highlight;
+   background:url(@pattern) @highlight;
 }
 
 /* Flip the last submenu so it stays within the page */
@@ -536,14 +551,14 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
   display: block;  
   cursor: pointer; 
   text-indent: -9999px; 
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @primary;
+  background:url(@pattern) @primary;
   -webkit-border-radius: 23px; 
 }
 .flex-control-nav li a:hover { 
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @highlight; 
+  background:url(@pattern) @highlight; 
 }
 .flex-control-nav li a.active {
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @highlight;  
+  background:url(@pattern) @highlight;  
 }
 
 
@@ -561,7 +576,7 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
 }
 
 .captions h3 {
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) @highlight;
+  background:url(@pattern) @highlight;
   color: @background;
   padding: 8px 20px 2px 20px;
   display: block;

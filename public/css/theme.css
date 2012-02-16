@@ -9,11 +9,25 @@
 img {
   margin-bottom: 20px;
 }
+#portfolio img {
+  max-width: 90%;
+  padding: 10px;
+  /* A percentage that, when doubled and added to the above, makes 100%. */
+
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #333333;
+  /* Color of the faux border. */
+
+}
+#portfolio img:hover {
+  background-color: darksalmon;
+  /* Color of the faux border. */
+
+}
 body {
-  background-color: #dddddd;
+  background-color: #eeeeee;
   padding-top: 0px;
   font-family: "Gotham";
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) #dddddd;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #eeeeee;
 }
 h1,
 h2,
@@ -21,25 +35,25 @@ h3,
 h4,
 h5,
 h6 {
-  color: #222222;
+  color: #333333;
   font-family: "Gotham";
   /*text-shadow: 1px 2px 0 @hover, 2px 3px 0 @hover, 3px 4px 0 @hover;*/
 
 }
 p, li, a {
-  color: #444444;
+  color: #333333;
   font-family: "Gotham";
 }
 .fancyborder {
   /*background: url(../images/dark_stripes.png) -40px -40px repeat-x;*/
 
-  border-top: 1px solid #222222;
+  border-top: 1px solid #333333;
   padding-top: 20px;
 }
 hr {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) #222222;
-  color: #222222;
-  padding-top: 1px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #333333;
+  color: #333333;
+  padding-top: 10px;
   border: none;
   margin: 0 0 20px 0;
 }
@@ -47,8 +61,8 @@ hr {
   text-align: center;
 }
 span.reverse {
-  background: teal;
-  color: #dddddd;
+  background: darksalmon;
+  color: #eeeeee;
   padding: 2px 4px 0px;
   margin: 0px;
   -moz-border-radius: 1px;
@@ -71,12 +85,12 @@ span.reverse {
   float: left;
   height: 1px;
   line-height: 1px;
-  color: teal;
+  color: darksalmon;
 }
 .calltoaction {
   float: left;
   padding: 0px 0 0px 7px;
-  color: teal;
+  color: darksalmon;
 }
 /*--------------------------------------------------
 ----------------------------------------------------
@@ -106,7 +120,7 @@ form label {
   cursor: pointer;
   margin-bottom: 4px;
   padding-left: 2px;
-  color: #222222;
+  color: #333333;
 }
 input, textarea, select {
   display: block;
@@ -117,9 +131,9 @@ input, textarea {
   width: 100%;
   min-height: 36px;
   /*  max-width: 420px;*/
-  background: url(../images/input-bg.png) 0px 0px #dddddd;
-  color: #222222;
-  border: 1px solid #222222;
+  background: url(../images/input-bg.png) 0px 0px #eeeeee;
+  color: #333333;
+  border: 1px solid #333333;
   font-size: 1em;
   padding: 4px 5px 4px;
   box-sizing: border-box;
@@ -135,12 +149,12 @@ input, textarea {
   transition: all linear 0.2s;
 }
 input:focus, textarea:focus {
-  background: url(../images/input-bg.png) 0px -1px #dddddd;
+  background: url(../images/input-bg.png) 0px -1px #eeeeee;
   outline: none !important;
-  border-color: teal;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px teal;
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px teal;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px teal;
+  border-color: darksalmon;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px darksalmon;
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px darksalmon;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px darksalmon;
 }
 input.oversize, textarea.oversize {
   font-size: 18px !important;
@@ -148,24 +162,24 @@ input.oversize, textarea.oversize {
 }
 /* Text input and textarea, disabled */
 input[disabled], textarea[disabled] {
-  background-color: #dddddd;
+  background-color: #eeeeee;
 }
 /* Inlined Label Style */
 input.placeholder, textarea.placeholder {
-  color: #444444;
+  color: #333333;
 }
 select {
-  background: #dddddd;
-  color: #222222;
+  background: #eeeeee;
+  color: #333333;
   width: auto;
   min-width: 300px;
   padding: 20px;
   font-size: 1em;
-  border: 1px solid #222222;
+  border: 1px solid #333333;
   height: 2.2em;
 }
 select:focus {
-  border: 1px solid teal;
+  border: 1px solid darksalmon;
   outline: none !important;
 }
 input.small, textarea.small {
@@ -183,7 +197,7 @@ input.expand, textarea.expand {
 /* Fieldsets */
 form fieldset {
   padding: 9px 9px 2px 9px;
-  border: solid 1px #444444;
+  border: solid 1px #333333;
   margin: 9px 0 9px 0;
 }
 /* Inlined Radio & Checkbox */
@@ -243,11 +257,11 @@ BUTTONS
 ----------------------------------------------------
 ---------------------------------------------------- */
 .button, #searchsubmit {
-  background: #222222;
+  background: #333333;
   display: inline-block;
   text-align: center;
   padding: 10px 34px 10px;
-  color: #dddddd;
+  color: #eeeeee;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
@@ -307,7 +321,7 @@ input[type=submit].button {
 .button:focus,
 #searchsubmit:hover,
 input[type=submit]:focus {
-  background: teal;
+  background: darksalmon;
   text-decoration: none;
 }
 /* Disabled ---------- */
@@ -365,27 +379,27 @@ CENTERED MENU
 #centeredmenu ul li a {
   display: block;
   margin: 0;
-  padding: 1em 1em .8em 1em;
+  padding: .9em 1em .9em 1em;
   line-height: 1em;
   text-decoration: none;
-  color: #222222;
+  color: #333333;
   font-weight: bold;
   transition: all 2s linear;
   -webkit-transition: all 0.2s ease-out;
 }
 #centeredmenu ul li.active a {
-  color: #dddddd;
-  background: #222222;
+  color: #eeeeee;
+  background: #333333;
 }
 #centeredmenu ul li a:hover {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat #222222;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #333333;
   color: #fff;
 }
 #centeredmenu ul li:hover a, #centeredmenu ul li.hover a {
   /* This line is required for IE 6 and below */
 
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat #222222;
-  color: #dddddd;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #333333;
+  color: #eeeeee;
 }
 /* Submenu items */
 #centeredmenu ul ul {
@@ -413,10 +427,10 @@ CENTERED MENU
   clear: left;
   width: 100%;
   margin-top: 1px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat #222222;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #333333;
 }
 #centeredmenu ul ul li:first-child {
-  margin-top: 2px;
+  margin-top: 11px;
   border-top: none;
 }
 /*#centeredmenu ul ul li:last-child {
@@ -432,7 +446,7 @@ CENTERED MENU
   /* resets the bold set for the top level menu items */
 
   background: transparent;
-  color: #dddddd;
+  color: #eeeeee;
   line-height: 1em;
   /* overwrite line-height value from top menu */
 
@@ -443,8 +457,8 @@ CENTERED MENU
 #centeredmenu ul li.hover ul li a:hover {
   /* This line is required for IE 6 and below */
 
-  color: #dddddd;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) repeat teal;
+  color: #eeeeee;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") darksalmon;
 }
 /* Flip the last submenu so it stays within the page */
 #centeredmenu ul ul.last {
@@ -490,7 +504,7 @@ CENTERED MENU
     padding: 1em 1em;
     line-height: 1em;
     text-decoration: none;
-    color: #222222;
+    color: #333333;
     font-weight: bold;
   }
   /* Submenu items */
@@ -594,7 +608,7 @@ html[xmlns] .slides {
   left: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
-  color: #444444;
+  color: #333333;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   font-size: 14px;
   line-height: 18px;
@@ -662,14 +676,14 @@ html[xmlns] .slides {
   display: block;
   cursor: pointer;
   text-indent: -9999px;
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) #222222;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #333333;
   -webkit-border-radius: 23px;
 }
 .flex-control-nav li a:hover {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) teal;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") darksalmon;
 }
 .flex-control-nav li a.active {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) teal;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") darksalmon;
 }
 /* Addons */
 .flex-container {
@@ -683,8 +697,8 @@ html[xmlns] .slides {
   left: 0px;
 }
 .captions h3 {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==) teal;
-  color: #dddddd;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") darksalmon;
+  color: #eeeeee;
   padding: 8px 20px 2px 20px;
   display: block;
   width: 100%;
