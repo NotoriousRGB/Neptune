@@ -1,12 +1,13 @@
-@background: #eee;
+@background: #ddd;
 @primary: #333;
-@secondary: #333;
-@highlight: darksalmon;
+@secondary: #111;
+@highlight: #df6840;
 @hover: @highlight;
-@border: 10px;
+@border: 0px;
 @glyphs: @highlight;
 
 @pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
+@patterns: '';
 
 @headingfont: "Gotham";
 @bodyfont: "Gotham";
@@ -28,14 +29,25 @@ img {
 }
 
 #portfolio img {
-  max-width:100% - @border;
-  padding: @border; /* A percentage that, when doubled and added to the above, makes 100%. */
-  background:url(@pattern) @primary; /* Color of the faux border. */
+  max-width: 94%;
+  padding: 3%;
+  background: #fff;
+  outline: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px #6b6b6b;
 }
 
-#portfolio img:hover {
-  background-color: @highlight; /* Color of the faux border. */
+#portfolio {
+  margin-bottom: 20px;
 }
+
+
+
+
+
+/*nav {
+  background:url(@pattern) @primary;
+}*/
 
 body {
   background-color: @background;
@@ -57,8 +69,8 @@ p, li, a {
 }
 
 .fancyborder {
-	/*background: url(../images/dark_stripes.png) -40px -40px repeat-x;*/
-	border-top: 1px solid @primary;
+/*	background:url(@pattern) @primary; */	
+  border-top: 1px solid @primary;
 	padding-top: 20px;
 }
 
@@ -101,7 +113,7 @@ span.reverse {
 
 .glyphs {
   font-family: 'IconicStrokeRegular';
-  font-size: 32px;
+  font-size: 30px;
   float: left;
   height: 1px;
   line-height: 1px;
@@ -347,20 +359,21 @@ CENTERED MENU
 #centeredmenu ul li a {
    display:block;
    margin:0;
-   padding: .9em 1em .9em 1em;
+   padding: 1em 1em .8em 1em;
    line-height:1em;
    text-decoration:none;
    color:@primary;
    font-weight:bold;
    transition: all 2s linear;-webkit-transition: all .2s ease-out;
+   border-radius: 2px;
 }
 #centeredmenu ul li.active a {
    color:@background;
    background:@primary;
 }
 #centeredmenu ul li a:hover {
-   background:url(@pattern) repeat @primary;
-   color:#fff;
+   background:url(@pattern) @primary;
+   color: @background;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
@@ -372,7 +385,7 @@ CENTERED MENU
 #centeredmenu ul ul {
    display:none; /* Sub menus are hidden by default */
    position:absolute;
-   top: 2.8em;
+   top: 2.7em;
    left:0;
    right:auto; /*resets the right:50% on the parent ul */
    width:auto; /* width of the drop-down menus */  
@@ -386,6 +399,7 @@ CENTERED MENU
   width:100%;
   margin-top: 1px;
   background:url(@pattern) repeat @primary;
+  border-radius: 2px;
 }
 
 #centeredmenu ul ul li:first-child {
@@ -404,6 +418,7 @@ CENTERED MENU
    background: transparent;
    color: @background;
    line-height:1em; /* overwrite line-height value from top menu */
+   border-radius: 2px;
 }
 
 #centeredmenu ul ul li a:hover,
@@ -540,24 +555,22 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
-.flex-control-nav {width: 100%; position: absolute; bottom: 37px; text-align: right;}
+.flex-control-nav {width: 100%; position: relative; bottom: 0px; text-align:center ; }
 .flex-control-nav li {margin: 0 0 0 12px; display: inline-block; zoom: 1; *display: inline;}
 .flex-control-nav li:first-child {margin: 0;}
-.flex-control-nav li:last-child {margin-right: 17px;}
+.flex-control-nav li:last-child {margin-right: 30px;}
 
 .flex-control-nav li a {
-  width: 26px; 
-  height: 26px; 
+  width: 22px; 
+  height: 22px; 
   display: block;  
   cursor: pointer; 
   text-indent: -9999px; 
-  background:url(@pattern) @primary;
+  background:url(@pattern) @secondary;
   -webkit-border-radius: 23px; 
 }
-.flex-control-nav li a:hover { 
-  background:url(@pattern) @highlight; 
-}
-.flex-control-nav li a.active {
+
+.flex-control-nav li a.active, .flex-control-nav li a:hover {
   background:url(@pattern) @highlight;  
 }
 
@@ -583,5 +596,14 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
   width: 100%;
   opacity: 1;
   opacity: 0;
+}
+
+.flexslider .slides img {
+  max-width: 97.8%;
+  padding: 1% 1% 1% 1%;
+  background: #fff;
+  outline: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px #6b6b6b;
 }
 	

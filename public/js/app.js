@@ -23,7 +23,7 @@ $(document).ready(function() {
     });
 
     $('#portfolio img').hover(function(){
-      $(this).css({'opacity': '1'});
+      $(this).css({'opacity': '.85'});
     }, function(){
       $(this).css({'opacity': '1'});
     });
