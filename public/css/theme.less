@@ -1,16 +1,17 @@
 @background: #ddd;
 @primary: #333;
-@secondary: #111;
+@secondary: #444;
 @highlight: #df6840;
 @hover: @highlight;
-@border: 0px;
+@border: 1px;
 @glyphs: @highlight;
 
 @pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
-@patterns: '';
+@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWPYvXv3fyBggGFGEAMZMME4e/bsActgqAAA41sVWe3Y/8UAAAAASUVORK5CYII=";
+@pattern: '';
 
-@headingfont: "Gotham";
-@bodyfont: "Gotham";
+@headingfont: "Hammersmith One";
+@bodyfont: "Hammersmith One";
 
 /****************/
 @font-face {
@@ -24,8 +25,44 @@
     font-style: normal;
 }
 
+@font-face{ 
+  font-family: 'WebSymbolsRegular';
+  src: url('fonts/websymbols-regular-webfont.eot');
+  src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/websymbols-regular-webfont.woff') format('woff'),
+       url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+       url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+}
+
+
+
 img {
   margin-bottom: 20px;
+}
+
+
+
+#portfolio a:before {
+    content: "+";
+    font-family: 'WebSymbolsRegular';
+    display: block;
+    font-size: 34px;
+    line-height: 1em;
+    height: 1em;
+    width: 1em;
+    text-align: center;
+ 
+    color: @highlight;
+    font-weight: bold;
+ 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+
+
+    margin: -0.7em 0 0 -0.5em;
+
 }
 
 #portfolio img {
@@ -35,13 +72,28 @@ img {
   outline: 1px solid #ccc;
   border-radius: 2px;
   box-shadow: 3px 3px 3px #6b6b6b;
+  z-index: 200;
+  position: relative;
 }
+
+#portfolio a {
+    position: relative;
+    display: block;
+    line-height: 0px;
+    text-decoration: none;
+}
+
+
+
+
 
 #portfolio {
   margin-bottom: 20px;
 }
 
-
+footer {
+  height: 400px;
+}
 
 
 
@@ -68,21 +120,32 @@ p, li, a {
   font-family: @bodyfont;
 }
 
-.fancyborder {
-/*	background:url(@pattern) @primary; */	
-  border-top: 1px solid @primary;
-	padding-top: 20px;
-}
 
-hr {
-  background:url(@pattern) @primary;
-  color: @primary;
-  padding-top: @border;
+
+hr.sixteen{
   border: none;
   margin: 0 0 20px 0;
 }
 
+.article {
+  margin-bottom: 20px;
+}
 
+.article h4 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 5px;
+  margin-bottom: 14px;
+}
+
+.article-aside {
+  padding-top: 13px;
+}
+
+
+
+.article-aside {
+  text-align: right;
+}
 
 .textcenter {
   text-align: center;
@@ -112,19 +175,48 @@ span.reverse {
 }
 
 .glyphs {
-  font-family: 'IconicStrokeRegular';
-  font-size: 30px;
+  font-family: 'WebSymbolsRegular';
+  font-size: 20px;
   float: left;
   height: 1px;
   line-height: 1px;
   color: @glyphs;
+  padding-top: 8px;
+}
+
+.clock {
+  font-family: 'WebSymbolsRegular';
+  color: @highlight;
+  font-size: 16px;
+  float: right;
+  padding: 0px 0 0 12px;
+}
+
+.comment-bubble {
+  font-family: 'WebSymbolsRegular';
+  color: @highlight;
+  font-size: 13px;
+  float: right;
+  padding: 1px 0 0 12px;
 }
 
 .calltoaction {
   float: left;
-  padding: 0px 0 0px 7px;
+  padding: 0px 0px 0px 12px;
   color: @glyphs;
 }
+
+.readmore {
+  padding: 0 0 0 7px;
+  color: @glyphs;
+  font-size: .85em;
+}
+
+
+
+
+
+
 
 
 
@@ -556,9 +648,8 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: relative; bottom: 0px; text-align:center ; }
-.flex-control-nav li {margin: 0 0 0 12px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-nav li:first-child {margin: 0;}
-.flex-control-nav li:last-child {margin-right: 30px;}
+.flex-control-nav li {margin: 0 6px 0 6px; display: inline-block; zoom: 1; *display: inline;}
+
 
 .flex-control-nav li a {
   width: 22px; 
@@ -566,12 +657,12 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
   display: block;  
   cursor: pointer; 
   text-indent: -9999px; 
-  background:url(@pattern) @secondary;
+  background: @secondary;
   -webkit-border-radius: 23px; 
 }
 
 .flex-control-nav li a.active, .flex-control-nav li a:hover {
-  background:url(@pattern) @highlight;  
+  background: @highlight;  
 }
 
 

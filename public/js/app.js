@@ -11,8 +11,8 @@ $(document).ready(function() {
     	animation: "slide",
     	directionNav: false,
 			controlNav: true,
-			slideshowSpeed: 6000,          
-			animationDuration: 800,
+			slideshowSpeed: 7000,          
+			animationDuration: 600,
 			controlsContainer: ".flex-container",
       start: function(){
         $('#slider h3').hide().fadeIn(2000);
@@ -22,10 +22,10 @@ $(document).ready(function() {
       },
     });
 
-    $('#portfolio img').hover(function(){
-      $(this).css({'opacity': '.85'});
+   $('#portfolio img').hover(function(){
+      $(this).animate({ opacity: '.4'}, 100);
     }, function(){
-      $(this).css({'opacity': '1'});
+      $(this).animate({ opacity: '1'}, 100);
     });
 
 

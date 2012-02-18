@@ -2,7 +2,7 @@ require 'sinatra'
 
 
 get '/' do
-  @title = "CoffeeScript in Sinatra"
+  @title = "Neptune - A Wordpress Theme"
   erb :index
 end
 
