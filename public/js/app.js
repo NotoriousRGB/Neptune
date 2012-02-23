@@ -23,9 +23,9 @@ $(document).ready(function() {
     });
 
    $('#portfolio img').hover(function(){
-      $(this).animate({ opacity: '.4'}, 100);
+      $(this).animate({ opacity: '.4'}, 200);
     }, function(){
-      $(this).animate({ opacity: '1'}, 100);
+      $(this).animate({ opacity: '1'}, 200);
     });
 
 

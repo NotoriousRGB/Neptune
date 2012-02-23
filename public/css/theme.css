@@ -60,7 +60,7 @@ body {
   background-color: #dddddd;
   padding-top: 0px;
   font-family: "Hammersmith One";
-  background: url('') #dddddd;
+  background: url('/images/bg_texture.jpg') #dddddd;
 }
 h1,
 h2,
@@ -79,7 +79,9 @@ p, li, a {
 }
 hr.sixteen {
   border: none;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAS0lEQVQYGY2P0QoAIAgDW///z+aCwZSEejHWdUxExPIDIKOAZ7xvDwRxel5AQQxp7PA1OiRTh9nl2UkfJGFzZeMk/AXSULYelflwAPHTKwUaIRJKAAAAAElFTkSuQmCC") transparent;
+  padding-top: 0px;
 }
 .article {
   margin-bottom: 20px;
@@ -91,8 +93,6 @@ hr.sixteen {
 }
 .article-aside {
   padding-top: 13px;
-}
-.article-aside {
   text-align: right;
 }
 .textcenter {
@@ -451,13 +451,13 @@ CENTERED MENU
   background: #333333;
 }
 #centeredmenu ul li a:hover {
-  background: url('') #333333;
+  background: url('/images/bg_texture.jpg') #333333;
   color: #dddddd;
 }
 #centeredmenu ul li:hover a, #centeredmenu ul li.hover a {
   /* This line is required for IE 6 and below */
 
-  background: url('') repeat #333333;
+  background: url('/images/bg_texture.jpg') repeat #333333;
   color: #dddddd;
 }
 /* Submenu items */
@@ -486,7 +486,7 @@ CENTERED MENU
   clear: left;
   width: 100%;
   margin-top: 1px;
-  background: url('') repeat #333333;
+  background: url('/images/bg_texture.jpg') repeat #333333;
   border-radius: 2px;
 }
 #centeredmenu ul ul li:first-child {
@@ -519,7 +519,7 @@ CENTERED MENU
   /* This line is required for IE 6 and below */
 
   color: #dddddd;
-  background: url('') #df6840;
+  background: url('/images/bg_texture.jpg') #df6840;
 }
 /* Flip the last submenu so it stays within the page */
 #centeredmenu ul ul.last {
@@ -749,7 +749,7 @@ html[xmlns] .slides {
   left: 0px;
 }
 .captions h3 {
-  background: url('') #df6840;
+  background: url('/images/bg_texture.jpg') #df6840;
   color: #dddddd;
   padding: 8px 20px 2px 20px;
   display: block;

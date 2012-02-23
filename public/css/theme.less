@@ -7,8 +7,8 @@
 @glyphs: @highlight;
 
 @pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
-@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAIElEQVQIHWPYvXv3fyBggGFGEAMZMME4e/bsActgqAAA41sVWe3Y/8UAAAAASUVORK5CYII=";
-@pattern: '';
+@pattern2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAS0lEQVQYGY2P0QoAIAgDW///z+aCwZSEejHWdUxExPIDIKOAZ7xvDwRxel5AQQxp7PA1OiRTh9nl2UkfJGFzZeMk/AXSULYelflwAPHTKwUaIRJKAAAAAElFTkSuQmCC";
+@pattern: '/images/bg_texture.jpg';
 
 @headingfont: "Hammersmith One";
 @bodyfont: "Hammersmith One";
@@ -59,7 +59,6 @@ img {
     top: 50%;
     left: 50%;
     z-index: 100;
-
 
     margin: -0.7em 0 0 -0.5em;
 
@@ -124,7 +123,9 @@ p, li, a {
 
 hr.sixteen{
   border: none;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
+  background:url(@pattern2) transparent;
+  padding-top: 0px;
 }
 
 .article {
@@ -139,13 +140,15 @@ hr.sixteen{
 
 .article-aside {
   padding-top: 13px;
-}
-
-
-
-.article-aside {
   text-align: right;
 }
+
+
+#tagline {
+  
+}
+
+
 
 .textcenter {
   text-align: center;
