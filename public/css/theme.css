@@ -1,4 +1,22 @@
 /****************/
+#sequence {
+  position: relative;
+}
+#sequence li {
+  list-style: none;
+}
+#sequence img {
+  margin-left: 10px;
+  position: relative;
+}
+.dave {
+  position: absolute;
+  bottom: 25%;
+  left: 0px;
+  /*background:url(@pattern) @background;*/
+
+  margin-left: 10px;
+}
 @font-face {
   font-family: 'IconicStrokeRegular';
   src: url('fonts/iconic_stroke-webfont.eot');
@@ -32,11 +50,8 @@ img {
   margin: -0.7em 0 0 -0.5em;
 }
 #portfolio img {
-  max-width: 94%;
-  padding: 3%;
   background: #fff;
-  outline: 1px solid #ccc;
-  border-radius: 2px;
+  outline: 0px solid #444444;
   box-shadow: 3px 3px 3px #6b6b6b;
   z-index: 200;
   position: relative;
@@ -57,10 +72,10 @@ footer {
   background:url(@pattern) @primary;
 }*/
 body {
-  background-color: #dddddd;
+  background-color: #cccccc;
   padding-top: 0px;
   font-family: "Hammersmith One";
-  background: url('/images/bg_texture.jpg') #dddddd;
+  background: url('/images/bg_texture2.jpg') #cccccc;
 }
 h1,
 h2,
@@ -79,9 +94,9 @@ p, li, a {
 }
 hr.sixteen {
   border: none;
-  margin-bottom: 20px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAS0lEQVQYGY2P0QoAIAgDW///z+aCwZSEejHWdUxExPIDIKOAZ7xvDwRxel5AQQxp7PA1OiRTh9nl2UkfJGFzZeMk/AXSULYelflwAPHTKwUaIRJKAAAAAElFTkSuQmCC") transparent;
-  padding-top: 0px;
+  margin-bottom: 40px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") transparent;
+  padding-top: 5px;
 }
 .article {
   margin-bottom: 20px;
@@ -98,15 +113,18 @@ hr.sixteen {
 .textcenter {
   text-align: center;
 }
-span.reverse {
+.reverse {
   background: #df6840;
-  color: #dddddd;
-  padding: 2px 4px 0px;
-  margin: 0px;
-  -moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
-  border-radius: 1px;
+  color: #cccccc;
+  padding: 2px 8px 0px 8px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   font-weight: bold;
+}
+.highlight {
+  color: #df6840;
+  text-shadow: 3px 3px 0px #a4a4a4;
 }
 .bigbreak {
   margin-bottom: 600px;
@@ -189,7 +207,7 @@ input, textarea {
   width: 100%;
   min-height: 36px;
   /*  max-width: 420px;*/
-  background: url(../images/input-bg.png) 0px 0px #dddddd;
+  background: url(../images/input-bg.png) 0px 0px #cccccc;
   color: #333333;
   border: 1px solid #333333;
   font-size: 1em;
@@ -207,7 +225,7 @@ input, textarea {
   transition: all linear 0.2s;
 }
 input:focus, textarea:focus {
-  background: url(../images/input-bg.png) 0px -1px #dddddd;
+  background: url(../images/input-bg.png) 0px -1px #cccccc;
   outline: none !important;
   border-color: #df6840;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #df6840;
@@ -220,14 +238,14 @@ input.oversize, textarea.oversize {
 }
 /* Text input and textarea, disabled */
 input[disabled], textarea[disabled] {
-  background-color: #dddddd;
+  background-color: #cccccc;
 }
 /* Inlined Label Style */
 input.placeholder, textarea.placeholder {
   color: #444444;
 }
 select {
-  background: #dddddd;
+  background: #cccccc;
   color: #333333;
   width: auto;
   min-width: 300px;
@@ -319,7 +337,7 @@ BUTTONS
   display: inline-block;
   text-align: center;
   padding: 10px 34px 10px;
-  color: #dddddd;
+  color: #cccccc;
   text-decoration: none;
   font-weight: bold;
   line-height: 1;
@@ -427,8 +445,8 @@ CENTERED MENU
   right: 50%;
 }
 #centeredmenu ul li {
-  margin: 0 20px;
-  padding: 0;
+  margin: 0 15px 0 25px;
+  padding: 0 0px;
   float: left;
   position: relative;
   left: 50%;
@@ -447,18 +465,18 @@ CENTERED MENU
   border-radius: 2px;
 }
 #centeredmenu ul li.active a {
-  color: #dddddd;
+  color: #cccccc;
   background: #333333;
 }
 #centeredmenu ul li a:hover {
-  background: url('/images/bg_texture.jpg') #333333;
-  color: #dddddd;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #cccccc;
+  color: #333333;
 }
 #centeredmenu ul li:hover a, #centeredmenu ul li.hover a {
   /* This line is required for IE 6 and below */
 
-  background: url('/images/bg_texture.jpg') repeat #333333;
-  color: #dddddd;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc;
+  color: #333333;
 }
 /* Submenu items */
 #centeredmenu ul ul {
@@ -486,12 +504,12 @@ CENTERED MENU
   clear: left;
   width: 100%;
   margin-top: 1px;
-  background: url('/images/bg_texture.jpg') repeat #333333;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc;
   border-radius: 2px;
 }
 #centeredmenu ul ul li:first-child {
-  margin-top: 2px;
-  border-top: none;
+  margin-top: 6px;
+  border-top: 3px solid transparent;
 }
 /*#centeredmenu ul ul li:last-child {
   border-bottom: @border solid @background;
@@ -506,7 +524,7 @@ CENTERED MENU
   /* resets the bold set for the top level menu items */
 
   background: transparent;
-  color: #dddddd;
+  color: #333333;
   line-height: 1em;
   /* overwrite line-height value from top menu */
 
@@ -518,8 +536,8 @@ CENTERED MENU
 #centeredmenu ul li.hover ul li a:hover {
   /* This line is required for IE 6 and below */
 
-  color: #dddddd;
-  background: url('/images/bg_texture.jpg') #df6840;
+  color: #333333;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #df6840;
 }
 /* Flip the last submenu so it stays within the page */
 #centeredmenu ul ul.last {
@@ -749,8 +767,8 @@ html[xmlns] .slides {
   left: 0px;
 }
 .captions h3 {
-  background: url('/images/bg_texture.jpg') #df6840;
-  color: #dddddd;
+  background: url('/images/bg_texture2.jpg') #df6840;
+  color: #cccccc;
   padding: 8px 20px 2px 20px;
   display: block;
   width: 100%;

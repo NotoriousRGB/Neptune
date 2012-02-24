@@ -1,4 +1,4 @@
-@background: #ddd;
+@background: #ccc;
 @primary: #333;
 @secondary: #444;
 @highlight: #df6840;
@@ -6,14 +6,61 @@
 @border: 1px;
 @glyphs: @highlight;
 
-@pattern: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
+@pattern3: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==";
 @pattern2: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAS0lEQVQYGY2P0QoAIAgDW///z+aCwZSEejHWdUxExPIDIKOAZ7xvDwRxel5AQQxp7PA1OiRTh9nl2UkfJGFzZeMk/AXSULYelflwAPHTKwUaIRJKAAAAAElFTkSuQmCC";
-@pattern: '/images/bg_texture.jpg';
+@pattern: '/images/bg_texture2.jpg';
 
 @headingfont: "Hammersmith One";
 @bodyfont: "Hammersmith One";
 
 /****************/
+
+#sequence {
+  position: relative;
+}
+
+#sequence li {
+    list-style: none;
+}
+
+#sequence img {
+  margin-left: 10px;
+  position: relative;
+}
+
+
+
+.dave {
+  position: absolute;
+  bottom: 25%;
+  left: 0px;
+  /*background:url(@pattern) @background;*/
+  margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @font-face {
     font-family: 'IconicStrokeRegular';
     src: url('fonts/iconic_stroke-webfont.eot');
@@ -65,11 +112,9 @@ img {
 }
 
 #portfolio img {
-  max-width: 94%;
-  padding: 3%;
+
   background: #fff;
-  outline: 1px solid #ccc;
-  border-radius: 2px;
+  outline: 0px solid @secondary;
   box-shadow: 3px 3px 3px #6b6b6b;
   z-index: 200;
   position: relative;
@@ -123,9 +168,9 @@ p, li, a {
 
 hr.sixteen{
   border: none;
-  margin-bottom: 20px;
-  background:url(@pattern2) transparent;
-  padding-top: 0px;
+  margin-bottom: 40px;
+  background:url(@pattern3) transparent;
+  padding-top: 5px;
 }
 
 .article {
@@ -144,9 +189,7 @@ hr.sixteen{
 }
 
 
-#tagline {
-  
-}
+
 
 
 
@@ -154,15 +197,19 @@ hr.sixteen{
   text-align: center;
 }
 
-span.reverse {
+.reverse {
 	background: @highlight;
 	color: @background;
-	padding: 2px 4px 0px;
-	margin: 0px;
-	-moz-border-radius: 1px;
-  -webkit-border-radius: 1px;
-  border-radius: 1px;
+	padding: 2px 8px 0px 8px;
+	-moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   font-weight: bold;
+}
+
+.highlight {
+  color: @highlight;
+  text-shadow: 3px 3px 0px #a4a4a4;
 }
 
 .bigbreak {
@@ -444,12 +491,12 @@ CENTERED MENU
    right:50%;
 }
 #centeredmenu ul li {
-   margin:0 20px;
-   padding:0;
+   margin:0 15px 0 25px;
+   padding: 0 0px;
    float:left;
    position:relative;
    left:50%;
-   top:0px;     
+   top:0px;
 }
 #centeredmenu ul li a {
    display:block;
@@ -467,13 +514,13 @@ CENTERED MENU
    background:@primary;
 }
 #centeredmenu ul li a:hover {
-   background:url(@pattern) @primary;
-   color: @background;
+   background:url(@pattern3) @background;
+   color: @primary;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
-   background:url(@pattern) repeat @primary;
-   color:@background;
+   background:url(@pattern3) repeat @background;
+   color:@primary;
 }
 
 /* Submenu items */
@@ -493,13 +540,13 @@ CENTERED MENU
   clear:left;
   width:100%;
   margin-top: 1px;
-  background:url(@pattern) repeat @primary;
+  background:url(@pattern3) repeat @background;
   border-radius: 2px;
 }
 
 #centeredmenu ul ul li:first-child {
-  margin-top: @border + 1;
-  border-top: none;
+  margin-top: 6px;
+  border-top: 3px solid transparent;
 }
 /*#centeredmenu ul ul li:last-child {
   border-bottom: @border solid @background;
@@ -511,7 +558,7 @@ CENTERED MENU
 #centeredmenu ul li.hover ul li a { /* This line is required for IE 6 and below */
    font-weight:bold; /* resets the bold set for the top level menu items */
    background: transparent;
-   color: @background;
+   color: @primary;
    line-height:1em; /* overwrite line-height value from top menu */
    border-radius: 2px;
 }
@@ -520,8 +567,8 @@ CENTERED MENU
 #centeredmenu ul li.active ul li a:hover,
 #centeredmenu ul li:hover ul li a:hover,
 #centeredmenu ul li.hover ul li a:hover { /* This line is required for IE 6 and below */
-   color: @background;
-   background:url(@pattern) @highlight;
+   color: @primary;
+   background:url(@pattern3) @highlight;
 }
 
 /* Flip the last submenu so it stays within the page */
