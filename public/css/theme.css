@@ -75,7 +75,7 @@ body {
   background-color: #cccccc;
   padding-top: 0px;
   font-family: "Hammersmith One";
-  background: url('/images/bg_texture2.jpg') #cccccc;
+  background: url('/images/bg_texture2.jpg') #cccccc fixed;
 }
 h1,
 h2,
@@ -95,8 +95,8 @@ p, li, a {
 hr.sixteen {
   border: none;
   margin-bottom: 40px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") transparent;
-  padding-top: 5px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") transparent fixed;
+  padding-top: 6px;
 }
 .article {
   margin-bottom: 20px;
@@ -469,13 +469,13 @@ CENTERED MENU
   background: #333333;
 }
 #centeredmenu ul li a:hover {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #cccccc;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #cccccc fixed;
   color: #333333;
 }
 #centeredmenu ul li:hover a, #centeredmenu ul li.hover a {
   /* This line is required for IE 6 and below */
 
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc fixed;
   color: #333333;
 }
 /* Submenu items */
@@ -493,6 +493,7 @@ CENTERED MENU
   /* width of the drop-down menus */
   min-width: 180px;
   z-index: 1000;
+  border-top: 5px solid transparent;
 }
 #centeredmenu ul ul li {
   left: auto;
@@ -504,11 +505,8 @@ CENTERED MENU
   clear: left;
   width: 100%;
   margin-top: 2px;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc fixed;
   border-radius: 2px;
-}
-#centeredmenu ul ul li:first-child {
-  margin-top: 7px;
 }
 /*#centeredmenu ul ul li:last-child {
   border-bottom: @border solid @background;
@@ -536,7 +534,7 @@ CENTERED MENU
   /* This line is required for IE 6 and below */
 
   color: #333333;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #df6840;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") #df6840 fixed;
 }
 /* Flip the last submenu so it stays within the page */
 #centeredmenu ul ul.last {

@@ -149,8 +149,7 @@ body {
   background-color: @background;
   padding-top: 0px;
   font-family: @bodyfont;
-
-  background:url(@pattern) @background;
+  background:url(@pattern) @background fixed;
 }
 
 h1, h2, h3, h4, h5 ,h6 {
@@ -169,8 +168,8 @@ p, li, a {
 hr.sixteen{
   border: none;
   margin-bottom: 40px;
-  background:url(@pattern3) transparent;
-  padding-top: 5px;
+  background:url(@pattern3) transparent fixed;
+  padding-top: 6px;
 }
 
 .article {
@@ -514,12 +513,12 @@ CENTERED MENU
    background:@primary;
 }
 #centeredmenu ul li a:hover {
-   background:url(@pattern3) @background;
+   background:url(@pattern3) @background fixed;
    color: @primary;
 }
 #centeredmenu ul li:hover a,
 #centeredmenu ul li.hover a { /* This line is required for IE 6 and below */
-   background:url(@pattern3) repeat @background;
+   background:url(@pattern3) repeat @background fixed;
    color:@primary;
 }
 
@@ -533,6 +532,7 @@ CENTERED MENU
    width:auto; /* width of the drop-down menus */  
    min-width: 180px;
    z-index:1000;
+   border-top: 5px solid transparent;
 }
 #centeredmenu ul ul li {
   left:auto;  /*resets the left:50% on the parent li */
@@ -540,12 +540,12 @@ CENTERED MENU
   clear:left;
   width:100%;
   margin-top: 2px;
-  background:url(@pattern3) repeat @background;
+  background:url(@pattern3) repeat @background fixed;
   border-radius: 2px;
 }
 
 #centeredmenu ul ul li:first-child {
-  margin-top: 7px;
+
 
 }
 /*#centeredmenu ul ul li:last-child {
@@ -568,7 +568,7 @@ CENTERED MENU
 #centeredmenu ul li:hover ul li a:hover,
 #centeredmenu ul li.hover ul li a:hover { /* This line is required for IE 6 and below */
    color: @primary;
-   background:url(@pattern3) @highlight;
+   background:url(@pattern3) @highlight fixed;
 }
 
 /* Flip the last submenu so it stays within the page */
