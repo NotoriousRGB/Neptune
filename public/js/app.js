@@ -1,9 +1,28 @@
 $(document).ready(function() {
 
+    
+
     $('#centeredmenu ul li').has('ul').hover(function(){
-      $(this).find('ul').hide().slideDown(200);
-    }, function(){
-      $(this).find('ul').hide();
+
+      var menuState = 'closed';
+
+      if ( menuState == 'closed') {
+        $(this).find('ul').hide().slideDown(200);
+        var menuState = 'open';
+      };
+
+
+      
+     
+    }, function(e){
+
+      if ( $("#sequence").css("width") > "480px") {
+        $(this).find('ul').slideUp(200);
+      } else {
+        $(this).find('ul').hide();
+      }
+
+      
     });
 
     $('.flexslider').flexslider({

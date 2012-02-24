@@ -43,7 +43,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 100;
+  z-index: 200;
   margin: -0.7em 0 0 -0.5em;
 }
 #portfolio img {
@@ -53,7 +53,7 @@ img {
   outline: 1px solid #ccc;
   border-radius: 2px;
   box-shadow: 3px 3px 3px #6b6b6b;
-  z-index: 200;
+  z-index: 300;
   position: relative;
 }
 #portfolio a {
@@ -92,6 +92,11 @@ p, li, a {
   color: #444444;
   font-family: "Hammersmith One";
 }
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px dotted #757575;
+}
 hr.sixteen {
   border: none;
   margin-bottom: 40px;
@@ -102,7 +107,7 @@ hr.sixteen {
   margin-bottom: 20px;
 }
 .article h4 {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px dotted #757575;
   padding-bottom: 5px;
   margin-bottom: 14px;
 }
@@ -160,7 +165,7 @@ hr.sixteen {
 }
 .calltoaction {
   float: left;
-  padding: 0px 0px 0px 12px;
+  padding: 0px 0px 0px 9px;
   color: #df6840;
 }
 .readmore {
@@ -451,6 +456,7 @@ CENTERED MENU
   position: relative;
   left: 50%;
   top: 0px;
+  border-bottom: 1px solid transparent;
 }
 #centeredmenu ul li a {
   display: block;
@@ -507,6 +513,7 @@ CENTERED MENU
   margin-top: 2px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIHWMoLS39DwQMMMwIYiADJhinrKwMLIOhAgCZhxO1afUkzAAAAABJRU5ErkJggg==") repeat #cccccc fixed;
   border-radius: 2px;
+  border-bottom: 0;
 }
 /*#centeredmenu ul ul li:last-child {
   border-bottom: @border solid @background;
@@ -577,7 +584,7 @@ CENTERED MENU
   #centeredmenu ul li a {
     display: block;
     margin: 0;
-    padding: 1em 1em;
+    padding: 1em 1em .8em 1em;
     line-height: 1em;
     text-decoration: none;
     color: #333333;
