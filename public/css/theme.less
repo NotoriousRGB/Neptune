@@ -17,22 +17,26 @@
 
 #sequence {
   position: relative;
+
 }
 
 #sequence li {
     list-style: none;
 }
 
-#sequence img {
-  margin-left: 10px;
-  position: relative;
-}
+
+
+
 
 
 
 .dave {
-  padding-top: 90px;
+
   /*background:url(@pattern) @background;*/
+}
+
+.frame {
+  overflow: hidden;
 }
 
 
@@ -655,7 +659,7 @@ flex-container a:active,
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {width: 100%; margin: 0; padding: 0;}
+.flexslider {width: 100%; margin: 20px 0 20px 0; padding: 0;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {max-width: 100%; display: block;}
 .flex-pauseplay span {text-transform: capitalize;}
@@ -725,35 +729,8 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
 }
 
 
-/* Addons */
-.flex-container {
-  height: auto;
-  margin-top: 0;
-  top: 0px;
-}
 
-.captions {
-  position: absolute;
-  bottom: 25%;
-  left: 0px;
-}
 
-.captions h3 {
-  background:url(@pattern) @highlight;
-  color: @background;
-  padding: 8px 20px 2px 20px;
-  display: block;
-  width: 100%;
-  opacity: 1;
-  opacity: 0;
-}
 
-.flexslider .slides img {
-  max-width: 97.8%;
-  padding: 1% 1% 1% 1%;
-  background: #fff;
-  outline: 1px solid #ccc;
-  border-radius: 2px;
-  box-shadow: 3px 3px 3px #6b6b6b;
-}
+
 	
