@@ -55,35 +55,17 @@ $(document).ready(function() {
       }
     });
 
-   // var options = {
-   //      nextButton: false,
-   //      prevButton: false,        
-   //      autoPlayDelay: 3000,            
-   //      pauseOnHover: false,        
-   //      animateStartingFrameIn: true,         
-   //      delayDuringOutInTransitions: 750,
-   //      keysNavigate: true,               
-   //      touchEnabled: false,
-   //      startingFrameID: 1,         
-   //      fallbackTheme: {              
-   //        speed: 500
-   //      }
-   //    };
-
-   //    var sequence = $("#sequence").sequence(options).data("sequence");
 
 
-
-
-
-
-
-
-   $('#portfolio img').hover(function(){
+   $('.photogrid img').hover(function(){
       $(this).animate({ opacity: '.4'}, 200);
     }, function(){
       $(this).animate({ opacity: '1'}, 200);
     });
+
+
+
+
 
 
 });
