@@ -13,7 +13,7 @@ flex-container a:active,
 
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider {width: 100%; margin: 10px 0 15px 0; padding: 0;}
+.flexslider {width: 100%; margin: 0px; padding: 0;}
 .flexslider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
 .flexslider .slides img {max-width: 100%; display: block;}
 .flex-pauseplay span {text-transform: capitalize;}
@@ -45,39 +45,40 @@ filter:~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endC
 
 /* Directional Nav
 *********************************/
-.flex-direction-nav li a {width: 52px; height: 52px; margin: 0 0 0; display: block; background: url(../images/theme/bg_direction_nav.png) no-repeat 0 0; position: absolute; bottom: 0px; cursor: pointer; text-indent: -9999px;}
-/*.flex-direction-nav li a {
+.flex-direction-nav li a {width: 52px; height: 52px; margin: 0 0 0; display: block; position: absolute; bottom: 0px; cursor: pointer; text-indent: -9999px;}
+.flex-direction-nav li a {
   width: 42px; 
   height: 42px; 
   margin: 0 0 0; 
-  display: block; 
-  background: url(../images/theme/bg_direction_nav.png) no-repeat 0 0; position: absolute; 
+  display: block;  
   bottom: 30px; 
   cursor: pointer; 
   text-indent: 0px;
   text-align: center;
-  font-size: 60px;
-  color: red;
-}*/
-.flex-direction-nav li .next {background-position: -52px 0; right: 0px;}
-.flex-direction-nav li .prev {right: 58px;}
+  font-size: 3em;
+  color: @highlight;
+  font-family: 'WebSymbolsRegular';
+}
+.flex-direction-nav li .next {right: -1em; top: -200px;}
+.flex-direction-nav li .prev {left: -1em; top: 4em;}
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
 .flex-control-nav {width: 100%; position: relative; bottom: 0px; text-align:center ; }
-.flex-control-nav li {margin: 0 6px 0 6px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li {margin: 0px 9px 0px 9px; display: inline-block; zoom: 1; *display: inline;}
 
 
 .flex-control-nav li a {
-  width: 22px; 
-  height: 22px; 
+  width: 18px; 
+  height: 18px; 
   display: block;  
   cursor: pointer; 
   text-indent: -9999px; 
   background: @secondary;
-  -webkit-border-radius: 23px; 
+  -webkit-border-radius: 18px; 
 }
 
-.flex-control-nav li a.active, .flex-control-nav li a:hover {
+.flex-control-nav li a.active {
   background: @highlight;  
 }
+

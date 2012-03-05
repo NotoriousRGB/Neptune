@@ -62,6 +62,9 @@
     .container .offset-by-fourteen              { padding-left: (14 * (@width / @columns) );  }
     .container .offset-by-fifteen               { padding-left: (15 * (@width / @columns) );  }
 
+    .container .offset-by-one-third             { padding-left: ((@width / 3) - @gutter); }
+    .container .offset-by-two-thirds             { padding-left: (((@width / 3) * 2) - @gutter); }
+
 
 
 /* #Tablet (Portrait)
@@ -115,6 +118,9 @@
         .container .offset-by-thirteen              { padding-left: (13 * (@width / @columns) );  }
         .container .offset-by-fourteen              { padding-left: (14 * (@width / @columns) );  }
         .container .offset-by-fifteen               { padding-left: (15 * (@width / @columns) );  }
+
+        .container .offset-by-one-third             { padding-left: ((@width / 3) - @gutter); }
+        .container .offset-by-two-thirds             { padding-left: (((@width / 3) * 2) - @gutter); }
     }
 
 
@@ -125,7 +131,7 @@
 
     @media only screen and (max-width: 767px) {
         .container { width: 300px; }
-        .columns, .column { margin: 0; }
+        .columns, .column { margin: 0 0 @gutter 0; }
 
         .container .one.column,
         .container .two.columns,
@@ -173,7 +179,7 @@
 
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .container { width: 420px; }
-        .columns, .column { margin: 0; }
+        .columns, .column { margin: 0 0 @gutter 0; }
 
         .container .one.column,
         .container .two.columns,
